@@ -65,7 +65,8 @@
      const mobileWidth = window.matchMedia('(max-width: 600px)');
      if (mobileWidth.matches) {
          captureSection.style.height = '520px';
-         captureSection.style.width = '450px';
+         captureSection.style.width = '340px';
+         alert('This feature is not yet optimized for mobile use. Sorry :(')
      } else {
          captureSection.style.height = '548px';
          captureSection.style.width = '860px';

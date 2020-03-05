@@ -1,0 +1,269 @@
+// 
+// 
+$backgroundColorDark: #120231;
+$gradientBarColorDark: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+$menuButtonColorNormal: #EE3EFE;
+$menuButtonColorHoverActive: #CE36DB;
+$suggestedButtonColorNeutral: #4180f6;
+$suggestedButtonColorHover: #3a72db;
+$searchBackgroundColor: #e6e6e6;
+$searchSuggestedHover: #dbdbdb;
+$searchSuggestedNeutral: #f0f0f0;
+$captureButton: #ff6161;
+$progressBarBackground: #999999;
+$progressBarLines: #b7b7b7;
+$repeatCaptureHover: #f0e5ee;
+$notSoBlack: #110038;
+$boxShadowMenuBtn: inset -1px -1px 0 0 #A72CB3,
+inset 1px 1px 0 0 #FFFFFF;
+//
+// Main
+body {
+    background: $backgroundColorDark;
+}
+
+button {
+    color: #FFFFFF;
+}
+
+.page-title {
+    background: $gradientBarColorDark;
+    box-shadow: 0 1px 0 0 $notSoBlack;
+    p {
+        color: #FFFFFF;
+    }
+}
+
+// Header
+.menu-items {
+    >a {
+        background: $menuButtonColorNormal;
+        border: 1px solid $notSoBlack;
+        box-shadow: $boxShadowMenuBtn;
+        color: #FFFFFF;
+        &:nth-child(1) {
+            &:hover {
+                background: $menuButtonColorHoverActive;
+            }
+        }
+    }
+    &-theme-dropdown-button {
+        background: $menuButtonColorNormal;
+        &:hover {
+            background: $menuButtonColorHoverActive;
+        }
+        a {
+            box-shadow: $boxShadowMenuBtn;
+            color: #FFFFFF;
+        }
+        #themeDropdown {
+            box-shadow: $boxShadowMenuBtn;
+        }
+    }
+}
+
+.dropdown-items {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    a {
+        background: $menuButtonColorNormal;
+        color: #120231;
+        &:hover {
+            background: $menuButtonColorHoverActive;
+        }
+    }
+}
+
+//Search
+.search {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+    &-title {
+        background: $gradientBarColorDark;
+        p {
+            color: #FFFFFF;
+        }
+    }
+    &-bar {
+        border: 1px solid #979797;
+        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    }
+    &-form {
+        button {
+            background: transparent;
+            color: $notSoBlack;
+            border: 1px solid #808080;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+        }
+    }
+}
+
+.search-suggestions {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+    border: 1px solid #110038;
+    button {
+        color: $notSoBlack;
+        background: #CCCCCC;
+        box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+        &:hover {
+            background: #B4B4B4;
+        }
+    }
+}
+
+//
+// Suggestions
+.suggestions {
+    &-title {
+        background: #FFFAFE;
+        border: 1px solid #2E32FB;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $notSoBlack;
+        p {
+            color: $notSoBlack;
+        }
+    }
+    &-card {
+        background: #E6E6E6;
+        &::after {
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        }
+        &-title {
+            background: $gradientBarColorDark;
+            border-bottom: 2px solid rgb(202, 202, 202);
+            p {
+                color: #FFFFFF;
+            }
+        }
+        &-gif {
+            a {
+                background: #2E32FB;
+                border: 1px solid #4C2F99;
+                box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+                color: #FFFFFF;
+                &:hover {
+                    background: #2629CC;
+                }
+            }
+        }
+    }
+}
+
+// 
+// Trending
+.trending {
+    &-title {
+        background: #FFFAFE;
+        border: 1px solid #2E32FB;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $notSoBlack;
+        p {
+            color: $notSoBlack;
+        }
+    }
+    &-container {
+        div {
+            p {
+                background: $gradientBarColorDark;
+            }
+        }
+    }
+}
+
+// 
+// Mis Guifos
+.mis-guifos {
+    &-title {
+        background: #FFFAFE;
+        border: 1px solid #2E32FB;
+        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $notSoBlack;
+        p {
+            color: $notSoBlack;
+        }
+    }
+}
+
+// 
+// Capturar Guifos
+.capture {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+    &-title {
+        background: $gradientBarColorDark;
+    }
+    &-buttons {
+        &-cancel {
+            background: #FFF4FD;
+            &:hover {
+                background: #CCCCCC;
+            }
+        }
+        &-start {
+            background: $menuButtonColorNormal;
+            &:hover {
+                background: $menuButtonColorHoverActive;
+            }
+        }
+    }
+    &-at-record {
+        #startRecordingButton {
+            color: #FFFFFF;
+            background: #EE3EFE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+        }
+        #cameraIcon {
+            background: #EE3EFE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+            img {
+                filter: invert(100%);
+            }
+        }
+        #playIcon {
+            background: #EE3EFE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+        }
+        progress[value]::-webkit-progress-bar {
+            background: #FFF4FD;
+            box-shadow: 2px 2px 0 0 #FFFCFC, -2px -2px 0 0 #000000;
+        }
+        progress[value]::-webkit-progress-value {
+            background: #EE3EFE;
+        }
+        #captureUpload {
+            background: #EE3EFE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+            &:hover {
+                background: $menuButtonColorHoverActive;
+            }
+        }
+        #cancelUploadButton {
+            color: $notSoBlack;
+            &:hover {
+                background: rgba(247, 201, 243, 0.295);
+            }
+        }
+        .upload-success {
+            &-right-box {
+                button {
+                    color: $notSoBlack;
+                    &:hover {
+                        background: rgba(247, 201, 243, 0.295);
+                    }
+                }
+            }
+            &-bottom-box {
+                button {
+                    background: #EE3EFE;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+                    &:hover {
+                        background: $menuButtonColorHoverActive;
+                    }
+                }
+            }
+        }
+    }
+}

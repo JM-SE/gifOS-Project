@@ -1,0 +1,283 @@
+body {
+  background: #120231;
+}
+
+button {
+  color: #FFFFFF;
+}
+
+.page-title {
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  -webkit-box-shadow: 0 1px 0 0 #110038;
+          box-shadow: 0 1px 0 0 #110038;
+}
+
+.page-title p {
+  color: #FFFFFF;
+}
+
+.menu-items > a {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+  color: #FFFFFF;
+}
+
+.menu-items > a:nth-child(1):hover {
+  background: #CE36DB;
+}
+
+.menu-items-theme-dropdown-button {
+  background: #EE3EFE;
+}
+
+.menu-items-theme-dropdown-button:hover {
+  background: #CE36DB;
+}
+
+.menu-items-theme-dropdown-button a {
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+  color: #FFFFFF;
+}
+
+.menu-items-theme-dropdown-button #themeDropdown {
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.dropdown-items {
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.dropdown-items a {
+  background: #EE3EFE;
+  color: #120231;
+}
+
+.dropdown-items a:hover {
+  background: #CE36DB;
+}
+
+.search {
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.search-title {
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.search-title p {
+  color: #FFFFFF;
+}
+
+.search-bar {
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+
+.search-form button {
+  background: transparent;
+  color: #110038;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.search-suggestions {
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  border: 1px solid #110038;
+}
+
+.search-suggestions button {
+  color: #110038;
+  background: #CCCCCC;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.search-suggestions button:hover {
+  background: #B4B4B4;
+}
+
+.suggestions-title {
+  background: #FFFAFE;
+  border: 1px solid #2E32FB;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+}
+
+.suggestions-title p {
+  color: #110038;
+}
+
+.suggestions-card {
+  background: #E6E6E6;
+}
+
+.suggestions-card::after {
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.suggestions-card-title {
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  border-bottom: 2px solid #cacaca;
+}
+
+.suggestions-card-title p {
+  color: #FFFFFF;
+}
+
+.suggestions-card-gif a {
+  background: #2E32FB;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+  color: #FFFFFF;
+}
+
+.suggestions-card-gif a:hover {
+  background: #2629CC;
+}
+
+.trending-title {
+  background: #FFFAFE;
+  border: 1px solid #2E32FB;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+}
+
+.trending-title p {
+  color: #110038;
+}
+
+.trending-container div p {
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.mis-guifos-title {
+  background: #FFFAFE;
+  border: 1px solid #2E32FB;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+}
+
+.mis-guifos-title p {
+  color: #110038;
+}
+
+.capture {
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.capture-title {
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.capture-buttons-cancel {
+  background: #FFF4FD;
+}
+
+.capture-buttons-cancel:hover {
+  background: #CCCCCC;
+}
+
+.capture-buttons-start {
+  background: #EE3EFE;
+}
+
+.capture-buttons-start:hover {
+  background: #CE36DB;
+}
+
+.capture-at-record #startRecordingButton {
+  color: #FFFFFF;
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.capture-at-record #cameraIcon {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.capture-at-record #cameraIcon img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.capture-at-record #playIcon {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.capture-at-record progress[value]::-webkit-progress-bar {
+  background: #FFF4FD;
+  -webkit-box-shadow: 2px 2px 0 0 #FFFCFC, -2px -2px 0 0 #000000;
+          box-shadow: 2px 2px 0 0 #FFFCFC, -2px -2px 0 0 #000000;
+}
+
+.capture-at-record progress[value]::-webkit-progress-value {
+  background: #EE3EFE;
+}
+
+.capture-at-record #captureUpload {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.capture-at-record #captureUpload:hover {
+  background: #CE36DB;
+}
+
+.capture-at-record #cancelUploadButton {
+  color: #110038;
+}
+
+.capture-at-record #cancelUploadButton:hover {
+  background: rgba(247, 201, 243, 0.295);
+}
+
+.capture-at-record .upload-success-right-box button {
+  color: #110038;
+}
+
+.capture-at-record .upload-success-right-box button:hover {
+  background: rgba(247, 201, 243, 0.295);
+}
+
+.capture-at-record .upload-success-bottom-box button {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.capture-at-record .upload-success-bottom-box button:hover {
+  background: #CE36DB;
+}
+/*# sourceMappingURL=dark.css.map */

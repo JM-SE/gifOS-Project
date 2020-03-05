@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guifos - Donde los gifs están.</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link id="linkDarkCSS" rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="checkIfDark(); getMyGifs(misGuifos)">
+
+    <div class="page-title">
+        <p>¡Bienvenidos/as a Guifos.com!------Donde los gifs están.////// Número de visitas: <span>12.765.803</span></p>
+    </div>
+
+    <div class="main-wrapper">
+
+        <header>
+            <nav class="creator-nav">
+                <img src="assets/arrow.svg" alt="Arrow" class="creator-nav-arrow" id="navArrow">
+                <img src="assets/gifOF_logo.png" alt="gifOS Logo" id="logoNode">
+            </nav>
+        </header>
+
+
+        <main>
+
+            <section class="capture" id="captureSection">
+
+                <div class="capture-title" id="captureTitle">
+                    <p><b id="captureTitleInner">Crear Guifos</b></p>
+                    <img src="assets/button close.svg" alt="close button" id="captureCloseButton">
+                </div>
+
+                <img src="/assets/forward.svg" id="gifBlock" alt="gif view">
+
+                <video src="/assets/forward.svg" id="videoPre"></video>
+
+                <img src="assets/window img.png" alt="window icon" id="captureImg">
+
+                <div class="capture-body" id="captureBody">
+
+                    <h2>Aquí podrás crear tus propios guifos</h2>
+
+                    <p>Crear tu <b>guifo</b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:</p>
+
+                    <ol>
+                        <li>Dar permisos de acceso a la cámara (sólo por el tiempo de uso).</li>
+                        <li>Capturar tu momento guifo.</li>
+                        <li>Revisar el momento.</li>
+                        <li>Listo para subir y compartir!</li>
+                    </ol>
+
+                    <p>¿Quieres comenzar a crear tu <b>guifo</b> ahora?</p>
+
+                </div>
+
+                <div class="capture-buttons" id="captureButtons">
+
+                    <button class="capture-buttons-cancel" id="captureCancelButton">Cancelar</button>
+                    <button class="capture-buttons-start" id="captureStartButton">Comenzar</button>
+
+
+                </div>
+
+                <div class="capture-at-record" id="captureAtRecord">
+                    <div id="cameraIcon" onmouseover="hoverWhenActiveOn(cameraIcon, startRecordingButton)" onmouseout="hoverWhenActiveOff(cameraIcon, startRecordingButton)"><img src="assets/camera.svg" alt="camera icon"></div>
+                    <button id="startRecordingButton" onmouseover="hoverWhenActiveOn(startRecordingButton, cameraIcon)" onmouseout="hoverWhenActiveOff(startRecordingButton, cameraIcon)">Capturar</button>
+
+                    <div id="circleIcon" onmouseover="hoverWhenActiveOn(circleIcon, stopRecordingButton)" onmouseout="hoverWhenActiveOff(circleIcon, stopRecordingButton)"><img src="assets/recording.svg" alt="capture icon"></div>
+                    <button id="stopRecordingButton" onmouseover="hoverWhenActiveOn(stopRecordingButton, circleIcon)" onmouseout="hoverWhenActiveOff(stopRecordingButton, circleIcon)">Listo</button>
+
+                    <button id="captureRepeat">Repetir Captura</button>
+                    <button id="captureUpload">Subir Guifo</button>
+                    <div id="playIcon"><img src="assets/forward.svg" alt="play icon"></div>
+                    <progress value="0" max="1" id="progressBar"></progress>
+                    <div>
+                        <p id="elapsedTime">00:00:00</p>
+                    </div>
+
+                    <div class="uploading-screen" id="uploadingScreen">
+                        <img src="assets/globe_img.png" alt="globe image">
+                        <h3>Estamos subiendo tu guifo...</h3>
+                        <p id="timeMsg">Tiempo restante: 38 años algunos minutos</p>
+                    </div>
+
+                    <button id="cancelUploadButton">Cancelar</button>
+
+                    <div class="upload-success" id="uploadSuccessScreen">
+
+                        <div class="upload-success-img-preview">
+                            <img id="gifPrevSmall" src="/assets/forward.svg" alt="preview rec gif">
+                        </div>
+
+                        <div class="upload-success-right-box">
+                            <h3>Guifo creado con éxito!</h3>
+                            <button id="clipboardGifURLButton" class="upload-success-copy">Copiar Enlace Guifo</button>
+                            <button id="saveGifButton" class="upload-success-download">Descargar Guifo</button>
+                        </div>
+
+                        <div class="upload-success-bottom-box">
+                            <button id="uploadSuccessButton" class="upload-success-ready">Listo</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <div class="mis-guifos-title" id="misGuifosTitle">
+                    <p id="misGuifosInnerText">Mis guifos</p>
+                </div>
+
+                <div id="misGuifos" class="mis-guifos"></div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/capture.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
+
+</body>
+
+</html>

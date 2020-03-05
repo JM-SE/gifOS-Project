@@ -1,0 +1,1190 @@
+                                * {
+                                    margin: 0;
+                                    padding: 0;
+                                    outline: 0;
+                                    font-size: 100%;
+                                    vertical-align: baseline;
+                                    font-family: 'Chakra Petch', sans-serif;
+                                }
+                                
+                                $backgroundColor: #fff4fd;
+                                $gradientBarColor: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                                $menuButtonColorNormal: #f7c9f3;
+                                $menuButtonColorHoverActive: #e6bbe2;
+                                $suggestedButtonColorNeutral: #4180f6;
+                                $suggestedButtonColorHover: #3a72db;
+                                $searchBackgroundColor: #e6e6e6;
+                                $searchSuggestedHover: #dbdbdb;
+                                $searchSuggestedNeutral: #f0f0f0;
+                                $captureButton: #ff6161;
+                                $progressBarBackground: #999999;
+                                $progressBarLines: #b7b7b7;
+                                $repeatCaptureHover: #f0e5ee;
+                                $notSoBlack: #110038;
+                                //
+                                // Main
+                                body {
+                                    background: $backgroundColor;
+                                    height: 100vh;
+                                }
+                                
+                                .main-wrapper {
+                                    height: 100vh;
+                                    width: auto;
+                                    padding: 2.5em 2em 0 2em;
+                                    padding-bottom: 80em;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                
+                                .page-title {
+                                    width: 100%;
+                                    height: 23px;
+                                    background: $gradientBarColor;
+                                    box-shadow: 0 1px 0 0 $notSoBlack;
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                                    p {
+                                        padding: .3em;
+                                        font-size: 11px;
+                                        color: #FFFFFF;
+                                        letter-spacing: 0;
+                                    }
+                                }
+                                
+                                a {
+                                    text-decoration: none;
+                                    color: $notSoBlack;
+                                    &:hover {
+                                        cursor: pointer;
+                                    }
+                                }
+                                
+                                // Header
+                                nav {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-bottom: 2em;
+                                    #logoNode {
+                                        cursor: pointer;
+                                        width: 5.5em;
+                                        height: auto;
+                                        margin-bottom: 2em;
+                                    }
+                                }
+                                
+                                .creator-nav {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: flex-start;
+                                    &-arrow {
+                                        margin-right: 1em;
+                                        cursor: pointer;
+                                    }
+                                }
+                                
+                                .menu-items {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-around;
+                                    align-items: center;
+                                    >a {
+                                        font-size: 16px;
+                                        background: $menuButtonColorNormal;
+                                        padding: 0.5em 1.7em 0.5em 1.7em;
+                                        border: 1px solid $notSoBlack;
+                                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                        color: $notSoBlack;
+                                        letter-spacing: 0;
+                                        text-align: center;
+                                        line-height: 18px;
+                                        &:nth-child(1) {
+                                            margin: 0 0 1em 0;
+                                            &:hover {
+                                                background: $menuButtonColorHoverActive;
+                                            }
+                                        }
+                                    }
+                                    button {
+                                        font-size: 16px;
+                                        padding: 0.5em 1.7em 0.5em 1.7em;
+                                        background: transparent;
+                                        border: none;
+                                        box-shadow: none;
+                                        margin-left: 0;
+                                        margin: 1em 0 0 0;
+                                        cursor: pointer;
+                                        letter-spacing: 0;
+                                        text-align: center;
+                                        line-height: 18px;
+                                    }
+                                    &-theme-dropdown-button {
+                                        display: flex;
+                                        flex-direction: row;
+                                        flex-wrap: nowrap;
+                                        position: relative;
+                                        width: 180px;
+                                        background: $menuButtonColorNormal;
+                                        &:hover {
+                                            background: $menuButtonColorHoverActive;
+                                        }
+                                        a {
+                                            margin: 0 0 0 0;
+                                            font-size: 16px;
+                                            border: 1px solid $notSoBlack;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            padding: 0.5em 1.7em 0.5em 1.7em;
+                                            color: #110038;
+                                            letter-spacing: 0;
+                                            text-align: center;
+                                            line-height: 18px;
+                                        }
+                                        #themeDropdown {
+                                            display: flex;
+                                            border: 1px solid $notSoBlack;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            padding: .87em 1em .87em 1em;
+                                            position: absolute;
+                                            left: 138px;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                                
+                                .dropdown-items {
+                                    background: $searchBackgroundColor;
+                                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                                    display: none;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    position: absolute;
+                                    z-index: 99;
+                                    width: 181px;
+                                    height: 105px;
+                                    top: 37px;
+                                    left: 0;
+                                    .dropdown-item {
+                                        margin: 0 1em 0 1em;
+                                        padding: 0.5em 0em 0.5em .5em;
+                                        text-align: left;
+                                    }
+                                    a {
+                                        background: transparent;
+                                        &:hover {
+                                            background: $backgroundColor;
+                                        }
+                                    }
+                                }
+                                
+                                .dropdown-items-show {
+                                    display: flex;
+                                }
+                                
+                                //Search
+                                .search {
+                                    background: $searchBackgroundColor;
+                                    height: 99px;
+                                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                                    &-title {
+                                        background: $gradientBarColor;
+                                        height: 24px;
+                                        width: 98.7%;
+                                        display: flex;
+                                        align-items: center;
+                                        position: relative;
+                                        top: 3px;
+                                        left: 3px;
+                                        p {
+                                            margin: 3px;
+                                            font-size: .9em;
+                                            font-size: 14px;
+                                            color: #FFFFFF;
+                                            letter-spacing: 0;
+                                        }
+                                    }
+                                    &-main {
+                                        display: flex;
+                                        flex-direction: row;
+                                        flex-wrap: nowrap;
+                                        margin: 15px;
+                                    }
+                                    &-bar {
+                                        border: 1px solid #979797;
+                                        box-shadow: inset -2px -2px 0 0 $searchBackgroundColor, inset 2px 2px 0 0 #000000;
+                                        width: 17em;
+                                    }
+                                    input {
+                                        padding: 15px 10px 18px 0;
+                                    }
+                                    input::-webkit-input-placeholder {
+                                        text-align: left;
+                                        transform: translate(10px, 0);
+                                        font-size: 11px;
+                                    }
+                                    &-form {
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                    }
+                                    &-button {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        height: 36px;
+                                        width: 102px;
+                                        background: transparent;
+                                        border: 1px solid #110038;
+                                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                        margin-left: 10px;
+                                        img {
+                                            position: relative;
+                                            left: -5px;
+                                        }
+                                    }
+                                }
+                                
+                                //
+                                // Search Suggestions
+                                .search-suggestions {
+                                    margin-top: 0;
+                                    width: 100%;
+                                    height: 160px;
+                                    background: $searchBackgroundColor;
+                                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                                    display: none;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    align-items: flex-start;
+                                    button {
+                                        background: #F0F0F0;
+                                        border: 1px solid #808080;
+                                        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+                                        margin: 0px 129px 0px 16px;
+                                        width: 285px;
+                                        padding: 8px 0 8px 15px;
+                                        text-align: left;
+                                        &:hover {
+                                            background: #DBDBDB;
+                                        }
+                                    }
+                                }
+                                
+                                //
+                                // Search History
+                                .search-history {
+                                    margin-bottom: 1em;
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    button {
+                                        font-size: 14px;
+                                        color: #FFFFFF;
+                                        letter-spacing: 0;
+                                        line-height: 18px;
+                                        padding: 8px 12px 8px 7px;
+                                        background: #4180F6;
+                                        border: 1px solid #4C2F99;
+                                        box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+                                        margin: 8px 8px 8px 0;
+                                        cursor: pointer;
+                                    }
+                                }
+                                
+                                //
+                                // Search Output
+                                .search-output {
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    columns: 4;
+                                    img {
+                                        margin: .5em .5em 3em .5em;
+                                    }
+                                    &-title {
+                                        background: #FFFAFE;
+                                        border: 1px solid $menuButtonColorHoverActive;
+                                        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+                                        width: 100%;
+                                        height: 32px;
+                                        margin-bottom: 16px;
+                                        display: none;
+                                        align-items: center;
+                                        p {
+                                            margin: 7px;
+                                            font-size: 14px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                        }
+                                    }
+                                }
+                                
+                                //
+                                // Suggestions
+                                .suggestions {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin: 3em 0 3em 0;
+                                    &-title {
+                                        background: #FFFAFE;
+                                        border: 1px solid $menuButtonColorHoverActive;
+                                        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+                                        width: 100%;
+                                        height: 32px;
+                                        margin-bottom: 3em;
+                                        display: flex;
+                                        align-items: center;
+                                        p {
+                                            margin: 7px;
+                                            font-size: 14px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                        }
+                                    }
+                                    &-card-container {
+                                        display: flex;
+                                        flex-direction: row;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        justify-content: space-evenly;
+                                    }
+                                    &-card {
+                                        width: 280px;
+                                        height: 280px;
+                                        background: $searchBackgroundColor;
+                                        margin-bottom: .5em;
+                                        position: relative;
+                                        &::after {
+                                            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                                            content: '';
+                                            display: block;
+                                            height: 100%;
+                                            position: absolute;
+                                            top: 0;
+                                            width: 100%;
+                                        }
+                                        &-title {
+                                            background: $gradientBarColor;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            width: 98.60%;
+                                            height: 24px;
+                                            position: relative;
+                                            top: 2px;
+                                            left: 2px;
+                                            border-bottom: 2px solid rgb(202, 202, 202);
+                                            z-index: 3;
+                                            p {
+                                                padding: .2em 0 .2em 0;
+                                                margin-left: .2em;
+                                                font-size: 14px;
+                                                color: #FFFFFF;
+                                                letter-spacing: 0;
+                                            }
+                                            img {
+                                                margin-right: .3em;
+                                            }
+                                        }
+                                        &-gif {
+                                            position: relative;
+                                            a {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                position: absolute;
+                                                top: 200px;
+                                                left: 20px;
+                                                padding: 8px 10px 8px 10px;
+                                                background: $suggestedButtonColorNeutral;
+                                                border: 1px solid #4C2F99;
+                                                box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+                                                font-size: 14px;
+                                                color: #FFFFFF;
+                                                letter-spacing: 0;
+                                                text-align: center;
+                                                line-height: 18px;
+                                                z-index: 3;
+                                                &:hover {
+                                                    background: $suggestedButtonColorHover;
+                                                    border: 1px solid #4C2F99;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                #downloadButton {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: absolute;
+                                    top: 200px;
+                                    right: 20px;
+                                    padding: 8px 10px 8px 10px;
+                                    background: $suggestedButtonColorNeutral;
+                                    border: 1px solid #4C2F99;
+                                    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+                                    font-size: 14px;
+                                    color: #FFFFFF;
+                                    letter-spacing: 0;
+                                    text-align: center;
+                                    line-height: 18px;
+                                    z-index: 3;
+                                    &:hover {
+                                        background: $suggestedButtonColorHover;
+                                    }
+                                }
+                                
+                                .see-more-output {
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-bottom: 3em;
+                                    img {
+                                        margin: .5em .5em 0 .5em;
+                                    }
+                                }
+                                
+                                // 
+                                // Trending
+                                .trending {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-bottom: 3em;
+                                    &-title {
+                                        background: #FFFAFE;
+                                        border: 1px solid $menuButtonColorHoverActive;
+                                        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+                                        width: 100%;
+                                        height: 32px;
+                                        margin-bottom: 16px;
+                                        display: flex;
+                                        align-items: center;
+                                        p {
+                                            margin: 7px;
+                                            font-size: 14px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                        }
+                                    }
+                                    &-container {
+                                        display: flex;
+                                        flex-direction: row;
+                                        flex-wrap: wrap;
+                                        flex-shrink: 2;
+                                        justify-content: center;
+                                        columns: 3;
+                                        div {
+                                            margin: .5em .5em 3em .5em;
+                                            overflow: hidden;
+                                            position: relative;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            z-index: 2;
+                                            img {
+                                                z-index: 4;
+                                            }
+                                            p {
+                                                background: $gradientBarColor;
+                                                position: absolute;
+                                                top: 182px;
+                                                left: 0;
+                                                z-index: 5;
+                                                color: #FFFFFF;
+                                                width: 100%;
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                // 
+                                // Mis Guifos
+                                .mis-guifos {
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    margin-bottom: 3em;
+                                    img {
+                                        margin-bottom: 1.5em;
+                                        margin: 0 1em 1em 0;
+                                    }
+                                    &-title {
+                                        background: #FFFAFE;
+                                        border: 1px solid $menuButtonColorHoverActive;
+                                        box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+                                        width: 100%;
+                                        height: 32px;
+                                        margin-bottom: 16px;
+                                        display: flex;
+                                        align-items: center;
+                                        p {
+                                            margin: 7px;
+                                            font-size: 14px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                        }
+                                    }
+                                }
+                                
+                                // 
+                                // Capturar Guifos
+                                .capture {
+                                    height: 386px;
+                                    width: 684px;
+                                    background: $searchBackgroundColor;
+                                    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                                    position: relative;
+                                    left: 50%;
+                                    transform: translate(-50%);
+                                    margin: 1em 0 10em 0;
+                                    #captureImg {
+                                        position: relative;
+                                        top: 35px;
+                                        left: 20px;
+                                    }
+                                    #gifBlock {
+                                        display: none;
+                                        background: black;
+                                        height: 434px;
+                                        width: 844px;
+                                        margin: .75em .5em 1.5em .5em;
+                                        border: 1px solid #979797;
+                                        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                                    }
+                                    video {
+                                        display: none;
+                                        background: black;
+                                        height: 434px;
+                                        width: 844px;
+                                        margin: .75em .5em 1.5em .5em;
+                                        border: 1px solid #979797;
+                                        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                                    }
+                                    &-preview {
+                                        background: black;
+                                        height: 434px;
+                                        width: 844px;
+                                        margin: .75em .5em 0 .5em;
+                                        border: 1px solid #979797;
+                                        box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                                    }
+                                    &-title {
+                                        background: $gradientBarColor;
+                                        height: 24px;
+                                        width: 99.3%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        position: relative;
+                                        top: 3px;
+                                        left: 3px;
+                                        p {
+                                            margin: 3px;
+                                            font-size: 14px;
+                                            color: #FFFFFF;
+                                            letter-spacing: 0;
+                                        }
+                                        img {
+                                            display: none;
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                    &-body {
+                                        position: relative;
+                                        display: flex;
+                                        flex-direction: column;
+                                        h2 {
+                                            margin: 5px;
+                                            position: relative;
+                                            left: 65px;
+                                        }
+                                        p {
+                                            margin: 10px;
+                                            font-size: 14px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                            line-height: 20px;
+                                            text-align: left;
+                                            padding: 0 50px 0 60px;
+                                            &:nth-child(4) {
+                                                position: relative;
+                                                top: 120px;
+                                                left: 0;
+                                            }
+                                        }
+                                        ol {
+                                            margin: 10px;
+                                            position: absolute;
+                                            top: 90px;
+                                            left: 75px;
+                                            li {
+                                                font-size: 14px;
+                                                color: $notSoBlack;
+                                                letter-spacing: 0;
+                                                line-height: 20px;
+                                                text-align: left;
+                                            }
+                                        }
+                                    }
+                                    &-buttons {
+                                        position: relative;
+                                        top: 130px;
+                                        left: 360px;
+                                        top: 130px;
+                                        left: 0;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        margin-right: 2em;
+                                        &-cancel {
+                                            background: #FFF4FD;
+                                            border: 1px solid $notSoBlack;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            font-size: 16px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                            text-align: center;
+                                            line-height: 18px;
+                                            padding: .5em 2em .5em 2em;
+                                            margin-right: .7em;
+                                            cursor: pointer;
+                                            &:hover {
+                                                background: rgba(247, 201, 243, 0.295);
+                                            }
+                                        }
+                                        &-start {
+                                            background: $menuButtonColorNormal;
+                                            border: 1px solid $notSoBlack;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            font-size: 16px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                            text-align: center;
+                                            line-height: 18px;
+                                            padding: .5em 2em .5em 2em;
+                                            cursor: pointer;
+                                            &:hover {
+                                                background: $menuButtonColorHoverActive;
+                                            }
+                                        }
+                                    }
+                                    &-at-record {
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: flex-end;
+                                        align-items: center;
+                                        margin: 24px 16px 16px 0;
+                                        #startRecordingButton {
+                                            display: none;
+                                            color: black;
+                                            background: #F7C9F3;
+                                            border: 1px solid #110038;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            padding: 9px 39.5px 9px 39.5px;
+                                            cursor: pointer;
+                                        }
+                                        #cameraIcon {
+                                            display: none;
+                                            padding: 8px 10.5px 7px 10.5px;
+                                            background: #F7C9F3;
+                                            border: 1px solid #110038;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            cursor: pointer;
+                                        }
+                                        #stopRecordingButton {
+                                            display: none;
+                                            background: #FF6161;
+                                            border: 1px solid #110038;
+                                            box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                                            padding: 9px 55px 9px 55px;
+                                            cursor: pointer;
+                                            color: white;
+                                        }
+                                        #circleIcon {
+                                            display: none;
+                                            padding: 8px 10.5px 8px 10.5px;
+                                            background: #FF6161;
+                                            border: 1px solid #110038;
+                                            box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                                            cursor: pointer;
+                                        }
+                                        #captureRepeat {
+                                            display: none;
+                                            background: #FFF4FD;
+                                            border: 1px solid $notSoBlack;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            font-size: 16px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                            text-align: center;
+                                            line-height: 18px;
+                                            padding: .5em 1em .5em 1em;
+                                            margin-right: .7em;
+                                            cursor: pointer;
+                                            &:hover {
+                                                background: rgba(247, 201, 243, 0.295);
+                                            }
+                                        }
+                                        #captureUpload {
+                                            display: none;
+                                            background: $menuButtonColorNormal;
+                                            border: 1px solid $notSoBlack;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            font-size: 16px;
+                                            color: $notSoBlack;
+                                            letter-spacing: 0;
+                                            text-align: center;
+                                            line-height: 18px;
+                                            padding: .5em 2em .5em 2em;
+                                            cursor: pointer;
+                                            &:hover {
+                                                background: $menuButtonColorHoverActive;
+                                            }
+                                        }
+                                        #elapsedTime {
+                                            display: none;
+                                            background: white;
+                                            padding: 7px 17px 7px 21px;
+                                            position: absolute;
+                                            left: 20px;
+                                            bottom: 15px;
+                                            background: #FFFFFF;
+                                            border: 1px solid #979797;
+                                            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                                        }
+                                        #playIcon {
+                                            background: #F7C9F3;
+                                            border: 1px solid #110038;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            height: 20px;
+                                            width: 20px;
+                                            position: absolute;
+                                            left: 160px;
+                                            display: none;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                        progress {
+                                            position: absolute;
+                                            left: 12em;
+                                            display: none;
+                                        }
+                                        progress[value] {
+                                            appearance: none;
+                                            height: 20px;
+                                            width: 240px;
+                                        }
+                                        progress[value]::-webkit-progress-bar {
+                                            background: #B4B4B4;
+                                            box-shadow: 2px 2px 0 0 #FFFCFC, -2px -2px 0 0 #000000;
+                                        }
+                                        progress[value]::-webkit-progress-value {
+                                            background: #F7C9F3;
+                                        }
+                                        .uploading-screen {
+                                            height: 434px;
+                                            width: 844px;
+                                            background: #FFFFFF;
+                                            display: none;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            align-items: center;
+                                            position: relative;
+                                            margin: 0 1em 0 2em;
+                                            img {
+                                                margin-bottom: 1em;
+                                            }
+                                            h3 {
+                                                margin-bottom: 2em;
+                                            }
+                                        }
+                                        #cancelUploadButton {
+                                            display: none;
+                                            position: absolute;
+                                            right: 20px;
+                                            bottom: 15px;
+                                            padding: .5em 2em .5em 2em;
+                                            background: #FFF4FD;
+                                            border: 1px solid #110038;
+                                            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                            cursor: pointer;
+                                        }
+                                        .upload-success {
+                                            display: none;
+                                            grid-template-columns: 60% 40%;
+                                            grid-template-rows: 60% 40%;
+                                            &-img-preview {
+                                                grid-row: 1 / 2;
+                                                grid-column: 1 / 2;
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                margin: 0 60px 0 0;
+                                                img {
+                                                    background: #FFFFFF;
+                                                    border: 1px solid #979797;
+                                                    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                                                }
+                                            }
+                                            &-right-box {
+                                                grid-row: 1 / 2;
+                                                grid-column: 2 / 3;
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: flex-start;
+                                                margin-left: 1em;
+                                                h3 {
+                                                    font-family: ChakraPetch-Bold;
+                                                    font-size: 16px;
+                                                    color: #110038;
+                                                    letter-spacing: 0;
+                                                    line-height: 22px;
+                                                    margin-bottom: 1em;
+                                                }
+                                                button {
+                                                    width: 256px;
+                                                    height: 36px;
+                                                    background: #FFF4FD;
+                                                    border: 1px solid #110038;
+                                                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                                    margin-bottom: 1em;
+                                                    cursor: pointer;
+                                                    &:hover {
+                                                        background: #F0E5EE;
+                                                    }
+                                                }
+                                            }
+                                            &-bottom-box {
+                                                grid-row: 2 / 3;
+                                                grid-column: 2 / 3;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                button {
+                                                    height: 36px;
+                                                    width: 144px;
+                                                    background: #F7C9F3;
+                                                    border: 1px solid #110038;
+                                                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                                                    cursor: pointer;
+                                                    &:hover {
+                                                        background: #E6BBE2;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                //
+                                //
+                                // 
+                                // 
+                                // 
+                                @media only screen and (max-width: 768px) {
+                                    .capture {
+                                        height: 430px;
+                                        width: 365px;
+                                        margin: 0 0 3em 0;
+                                        #gifBlock {
+                                            height: 400px;
+                                            width: 430px;
+                                        }
+                                        video {
+                                            height: 400px;
+                                            width: 430px;
+                                        }
+                                        &-preview {
+                                            height: 400px;
+                                            width: 430px;
+                                        }
+                                        &-title {
+                                            width: 98.6%;
+                                        }
+                                        &-body {
+                                            ol {
+                                                top: 120px;
+                                            }
+                                        }
+                                        &-buttons {
+                                            top: 130px;
+                                            left: 0;
+                                        }
+                                        &-at-record {
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: center;
+                                            align-items: center;
+                                            margin: 16px 16px 24px 16px;
+                                            #captureRepeat {
+                                                margin-right: .5em;
+                                                margin-left: 8em;
+                                                font-size: 14px;
+                                            }
+                                            #captureUpload {
+                                                font-size: 14px;
+                                            }
+                                            #elapsedTime {
+                                                padding: 7px 15px 7px 18px;
+                                                left: 15px;
+                                                bottom: 20px;
+                                            }
+                                            .uploading-screen {
+                                                height: 334px;
+                                            }
+                                            .upload-success {
+                                                height: 334px;
+                                                width: 360px;
+                                                display: none;
+                                                grid-template-columns: 100%;
+                                                grid-template-rows: 50% 30% 20%;
+                                                &-img-preview {
+                                                    grid-row: 1 / 2;
+                                                    grid-column: 1 / 2;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    margin: 5em 0 0 0;
+                                                }
+                                                &-right-box {
+                                                    grid-row: 2 / 3;
+                                                    grid-column: 1 / 2;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    margin: 10em 0 0 0;
+                                                }
+                                                &-bottom-box {
+                                                    grid-row: 3 / 4;
+                                                    grid-column: 1 / 2;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    margin: 10em 0 0 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 768px) {
+                                    .main-wrapper {
+                                        padding-bottom: 30em;
+                                    }
+                                    nav {
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        #logoNode {
+                                            width: auto;
+                                            margin: 0 0 0 0;
+                                        }
+                                    }
+                                    .menu-items {
+                                        flex-direction: row;
+                                        >a {
+                                            &:nth-child(1) {
+                                                margin: 0 .6em 0 0;
+                                            }
+                                        }
+                                        button {
+                                            margin: 0 1em 0 0;
+                                        }
+                                    }
+                                    .dropdown-items {
+                                        .dropdown-item {
+                                            margin-left: 15px;
+                                            padding: 0.5em 0em 0.5em .5em;
+                                            text-align: left;
+                                        }
+                                    }
+                                    .page-title {
+                                        height: auto;
+                                        p {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    .search {
+                                        input::-webkit-input-placeholder {
+                                            font-size: 1em;
+                                        }
+                                        &-title {
+                                            width: 99.3%;
+                                        }
+                                        &-bar {
+                                            width: 34em;
+                                        }
+                                        &-button {
+                                            margin-left: .5em;
+                                        }
+                                    }
+                                    .search-suggestions {
+                                        button {
+                                            width: 1065px;
+                                        }
+                                    }
+                                    .suggestions {
+                                        &-card-title {
+                                            width: 98.65%;
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                                    .capture {
+                                        #gifBlock {
+                                            height: 500px;
+                                            width: 620px;
+                                            margin-left: 2.5em;
+                                        }
+                                        video {
+                                            height: 500px;
+                                            width: 620px;
+                                            margin-left: 2.5em;
+                                        }
+                                        &-at-record {
+                                            progress[value] {
+                                                width: 190px;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 1274px) {
+                                    .search {
+                                        &-title {
+                                            width: 99.6%;
+                                        }
+                                        &-bar {
+                                            width: 65em;
+                                        }
+                                    }
+                                    .search-suggestions {
+                                        button {
+                                            width: 1065px;
+                                        }
+                                    }
+                                    .capture-at-record {
+                                        .upload-success {
+                                            display: none;
+                                            grid-template-columns: 60% 40%;
+                                            grid-template-rows: 60% 40%;
+                                            &-img-preview {
+                                                grid-row: 1 / 2;
+                                                grid-column: 1 / 2;
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                margin: 5em 10em 0 0;
+                                            }
+                                            &-right-box {
+                                                grid-row: 1 / 2;
+                                                grid-column: 2 / 3;
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: flex-start;
+                                                margin-left: 0;
+                                                margin: 0 2em 0 0;
+                                            }
+                                            &-bottom-box {
+                                                grid-row: 2 / 3;
+                                                grid-column: 2 / 3;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 1366px) {
+                                    .search {
+                                        &-bar {
+                                            width: 71.5em;
+                                        }
+                                    }
+                                    .search-suggestions {
+                                        button {
+                                            width: 1155px;
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 1440px) {
+                                    .search {
+                                        &-bar {
+                                            width: 76em;
+                                        }
+                                    }
+                                    .search-suggestions {
+                                        button {
+                                            width: 1230px;
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 1440px) {
+                                    .search {
+                                        &-bar {
+                                            width: 82em;
+                                        }
+                                    }
+                                    .search-suggestions {
+                                        button {
+                                            width: 1325px;
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 1600px) {
+                                    .search {
+                                        &-bar {
+                                            width: 86em;
+                                        }
+                                    }
+                                    .search-suggestions {
+                                        button {
+                                            width: 1390px;
+                                        }
+                                    }
+                                }
+                                
+                                @media only screen and (min-width: 1700px) {
+                                    .main-wrapper {
+                                        padding: 2.5em 8em 0 8em;
+                                    }
+                                    .search {
+                                        &-main {
+                                            margin: .7em;
+                                        }
+                                        &-bar {
+                                            width: 94em;
+                                            grid-column: 1 / 2;
+                                            box-sizing: border-box;
+                                            padding-bottom: 2em;
+                                        }
+                                        &-form {
+                                            display: grid;
+                                            grid-template-columns: 80% 20%;
+                                        }
+                                        &-button {
+                                            margin: 0 0 0 8em;
+                                        }
+                                    }
+                                    .search-suggestions {
+                                        button {
+                                            width: 1500px;
+                                        }
+                                        &-card-title {
+                                            width: 98.35%;
+                                        }
+                                    }
+                                }
